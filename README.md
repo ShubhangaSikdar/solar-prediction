@@ -33,10 +33,10 @@ To maintain an optimal grid balance, accurate predictions of solar power product
 | Altimeter | -9.0 | Log transform (`log1p`) | Severe skew |
 | Station pressure | -5.4 | Winsorization (1-99%) | Preserve all rows, cap extremes |
 
-4. Feature Engineering
+### 4. Feature Engineering
 -> Generated 6 engineered features motivated by physics from atmospheric variables.
 
-5. Modelling & Evaluation
+### 5. Modelling & Evaluation
 -> Metrics used to evaluate model: MAE, RMSE, R²\
 -> Result: Ensemble models proved superior to individual regressor models.
 
