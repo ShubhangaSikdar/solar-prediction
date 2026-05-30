@@ -12,13 +12,13 @@ To maintain an optimal grid balance, accurate predictions of solar power product
 | Task	| Regression |
 
 ## ⚙️Methodology
-1. Data Cleaning
+### 1. Data Cleaning
 -> Removed 4 irrelevant columns: (Inverter), Date, Random, Unnamed: 13\
 -> Imputed missing values with median (preferred method due to significant skewness in pressure variables)\
 -> Fixed bug: Original notebook incorrectly applied conversion to Celsius of already Celsius data, leading to an average temperature of −8.65°C. Fixed with a simple renaming of the column.\
 -> Cleansed negative wind speed values via abs() (sensor issue)
 
-2. Exploratory Data Analysis (7 Layers)
+### 2. Exploratory Data Analysis (7 Layers)
 -> Distribution of feature data and skewness\
 -> IQR detection of outliers — Visibility: 1,692 outliers (22%); entirely real physical occurrences of fog/haze\
 -> Analysis of correlation between atmospheric feature data and solar production\
@@ -26,7 +26,7 @@ To maintain an optimal grid balance, accurate predictions of solar power product
 -> Distribution of solar production by hour of day\
 -> Multivariate and bivariate analysis\
 
-3. Outlier Treatment Strategy
+### 3. Outlier Treatment Strategy
 | Feature | Skewness | Treatment | Reason |
 | :--- | :--- | :--- | :--- |
 | Visibility | -2.8 | Log transform (`log1p`) | Real fog events; scale compression |
